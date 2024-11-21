@@ -4,15 +4,15 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/css/theme.css": {
+    "file": "assets/theme-Bh1cAJBK.css",
+    "src": "resources/css/theme.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
     "file": "assets/app-B3ZB0LpW.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
-  },
-  "vendor/filament/filament/resources/css/theme.css": {
-    "file": "assets/theme-Bh1cAJBK.css",
-    "src": "vendor/filament/filament/resources/css/theme.css",
     "isEntry": true
   }
 }
