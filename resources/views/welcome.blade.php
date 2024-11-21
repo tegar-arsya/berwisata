@@ -30,8 +30,9 @@
 
         <!-- Main Content Container -->
         <main class="flex-grow container mx-auto px-6 py-8">
+            @include('components.carousel')
             <!-- Category Filter Section with Enhanced Design -->
-            <section class="mb-10">
+            <section class="mb-10 mt-20" id="filter-section">
                 <form action="{{ route('home') }}" method="GET" class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
                     <div class="flex space-x-4">
                         <div class="flex-grow relative">
@@ -127,7 +128,7 @@
             </section>
 
             <!-- Map Section with Enhanced Design -->
-            <section class="mt-16 bg-white rounded-2xl shadow-lg overflow-hidden">
+            <section class="mt-16 bg-white rounded-2xl shadow-lg overflow-hidden" id="map-section">
                 <div class="p-6 bg-blue-50">
                     <h2 class="text-3xl font-bold text-blue-800 mb-4">Tourism Map</h2>
                 </div>

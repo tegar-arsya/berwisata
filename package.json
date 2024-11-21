@@ -1,6 +1,7 @@
 {
     "private": true,
     "type": "module",
+    "engines": { "node": "18.x" },
     "scripts": {
         "build": "vite build",
         "dev": "vite"
@@ -21,4 +22,5 @@
         "flowbite": "^2.5.2",
         "sweetalert2": "^11.14.5"
     }
+
 }
