@@ -6,7 +6,7 @@
         "api/assets.php": {
             "runtime": "vercel-php@0.6.0"
         }
-    }"buildCommand": "npm run vercel-build",
+    },
     "routes": [
         {
             "src": "/build/assets/(.*)",
