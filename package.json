@@ -5,6 +5,7 @@
         "node": "18.x"
     },
     "scripts": {
+        "prebuild": "chmod +x node_modules/.bin/vite",
         "build": "vite build",
         "dev": "vite"
     },
