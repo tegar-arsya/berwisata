@@ -6,6 +6,7 @@ use App\Models\Wisata;
 use App\Models\Kategori;
 use App\Models\Review;
 use App\Models\acc_review;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
 class WisataController extends Controller
@@ -14,7 +15,7 @@ class WisataController extends Controller
     {
         // Ambil semua kategori untuk dropdown
         $kategoris = Kategori::all();
-
+        $faqs = Faq::all();
         // Ambil kategori dari request jika ada
         $kategoriId = $request->input('kategori_id');
 
@@ -27,7 +28,7 @@ class WisataController extends Controller
                 $query->whereHas('accReview'); // Hanya ambil review yang disetujui
             }])->get();
 
-        return view('welcome', compact('wisatas', 'kategoris'));
+        return view('welcome', compact('wisatas', 'kategoris', 'faqs'));
     }
 
     public function show($id)
