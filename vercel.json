@@ -31,8 +31,5 @@
         "SESSION_DRIVER": "cookie",
         "VIEW_COMPILED_PATH": "/tmp"
     }
-{
-    "buildCommand": "npm run vercel-build"
-}
 
 }
