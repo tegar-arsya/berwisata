@@ -1,14 +1,16 @@
 {
-    "version": 2,
     "functions": {
         "api/index.php": {
+            "runtime": "vercel-php@0.6.0"
+        },
+        "api/assets.php": {
             "runtime": "vercel-php@0.6.0"
         }
     },
     "routes": [
         {
-            "src": "/img/(.*)",
-            "dest": "/public/img/"
+            "src": "/build/assets/(.*)",
+            "dest": "/api/assets.php?assets=$1"
         },
         {
             "src": "/(.*)",
@@ -16,19 +18,17 @@
         }
     ],
     "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://filament-sig.vercel.app/",
+        "APP_NAME": "Laravel Vercel",
+        "APP_DEBUG": "false",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
+        "CACHE_STORE": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
-    },
-    "outputDirectory": "public"
+        "SESSION_DRIVER": "cookie",
+        "VIEW_COMPILED_PATH": "/tmp"
+    }
 }
-
